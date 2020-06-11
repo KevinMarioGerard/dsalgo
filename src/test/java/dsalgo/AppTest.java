@@ -7,6 +7,6 @@ public class AppTest {
 
     @Test public void testBoolean() {
         App app = new App();
-        assertThat(app.getBoolean()).isEqualTo(false);
+        assertThat(app.getBoolean()).isEqualTo(true);
     }
 }
