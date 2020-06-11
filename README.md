@@ -8,7 +8,7 @@ A collection of Data Structures and Algorithms implemented in Java.
         target="_blank"
         rel="nofollow,noreferrer"
         ><img
-            src="https://circleci.com/gh/KevinMarioGerard/dsalgo/tree/master.svg?style=svg"
+            src="https://circleci.com/gh/KevinMarioGerard/dsalgo/tree/master.svg?style=shield"
             alt="CircleCI"
     /></a>
 </div>
