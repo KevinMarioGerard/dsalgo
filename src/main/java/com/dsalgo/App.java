@@ -1,4 +1,4 @@
-package dsalgo;
+package com.dsalgo;
 
 public class App {
 
