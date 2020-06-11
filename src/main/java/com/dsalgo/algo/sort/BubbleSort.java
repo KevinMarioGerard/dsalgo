@@ -22,4 +22,26 @@ public class BubbleSort {
             }
         }
     }
+
+    // Stopping the algorithm if inner loop didn’t cause any swap.
+    public void optimizedSort(int[] arr) {
+
+        for (int i = 0; i < arr.length - 1; i++) {
+            boolean swapped = false;
+
+            for (int j = 0; j < arr.length - i - 1; j++) {
+
+                System.out.println(Arrays.toString(arr));
+
+                if (arr[j] > arr[j + 1]) {
+                    swap(arr, j, j + 1);
+                    swapped = true;
+                }
+            }
+
+            if (!swapped) {
+                break;
+            }
+        }
+    }
 }

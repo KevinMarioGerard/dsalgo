@@ -22,4 +22,12 @@ class BubbleSortTest {
 
         Assertions.assertArrayEquals(arr, new int[]{ 1, 2, 3, 4, 5, 6, 7, 8 });
     }
+
+    @Test void testOptimizedSort() {
+        int[] arr = { 15, 19, 41, 22, -8, 2, 1, -41 };
+
+        bubble.optimizedSort(arr);
+
+        Assertions.assertArrayEquals(arr, new int[]{ -41, -8, 1, 2, 15, 19, 22, 41 });
+    }
 }
