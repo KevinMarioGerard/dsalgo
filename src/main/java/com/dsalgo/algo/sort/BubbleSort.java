@@ -1,14 +1,10 @@
 package com.dsalgo.algo.sort;
 
+import com.dsalgo.util.ArrayUtil;
+
 import java.util.Arrays;
 
 public class BubbleSort {
-
-    private void swap(int[] arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp; 
-    }
 
     public void sort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
@@ -17,7 +13,7 @@ public class BubbleSort {
                 System.out.println(Arrays.toString(arr));
 
                 if (arr[j] > arr[j + 1]) {
-                    swap(arr, j, j + 1);
+                    ArrayUtil.swap(arr, j, j + 1);
                 }
             }
         }
@@ -34,7 +30,7 @@ public class BubbleSort {
                 System.out.println(Arrays.toString(arr));
 
                 if (arr[j] > arr[j + 1]) {
-                    swap(arr, j, j + 1);
+                    ArrayUtil.swap(arr, j, j + 1);
                     swapped = true;
                 }
             }
