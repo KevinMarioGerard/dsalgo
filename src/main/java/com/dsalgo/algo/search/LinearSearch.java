@@ -1,5 +1,8 @@
 package com.dsalgo.algo.search;
 
+/**
+ * Time Complexity: O(n)
+ */
 public class LinearSearch {
 
     public int search(int[] arr, int x) {

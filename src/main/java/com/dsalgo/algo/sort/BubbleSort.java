@@ -4,6 +4,11 @@ import com.dsalgo.util.ArrayUtil;
 
 import java.util.Arrays;
 
+/**
+ * Time Complexity: O(n*n)
+ * Best Case Time Complexity: O(n) (Already Sorted Array)
+ * Auxiliary Space: O(1)
+ */
 public class BubbleSort {
 
     public void sort(int[] arr) {

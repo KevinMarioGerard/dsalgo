@@ -4,6 +4,10 @@ import com.dsalgo.util.ArrayUtil;
 
 import java.util.Arrays;
 
+/**
+ * Time Complexity: O(n*n)
+ * Auxiliary Space: O(1)
+ */
 public class SelectionSort {
 
     public void sort(int[] arr) {
