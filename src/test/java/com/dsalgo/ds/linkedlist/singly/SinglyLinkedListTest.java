@@ -1,19 +1,21 @@
 package com.dsalgo.ds.linkedlist.singly;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 class SinglyLinkedListTest {
 
-    private static SinglyLinkedList list;
+    private SinglyLinkedList list;
     private static ByteArrayOutputStream outputStream;
 
     @BeforeAll static void init() {
+        outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+    }
+
+    @BeforeEach void createLinkedList() {
         list = new SinglyLinkedList();
         Node firstNode = new Node(1);
         Node secondNode = new Node(2);
@@ -24,19 +26,35 @@ class SinglyLinkedListTest {
         firstNode.next = secondNode;
         secondNode.next = thirdNode;
         thirdNode.next = fourthNode;
-
-        outputStream = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outputStream));
-    }
-
-    @Test void traverseLinkedList() {
-        list.traverse();
-        Assertions.assertEquals("1  2  3  4", outputStream.toString().trim());
     }
 
     @Test void traverse() {
         list.traverse();
         Assertions.assertEquals("1  2  3  4", outputStream.toString().trim());
+    }
+
+    @Test void insertAtHead() {
+        list.insert(new Node(10), 0);
+        list.traverse();
+        Assertions.assertEquals("10  1  2  3  4", outputStream.toString().trim());
+    }
+
+    @Test void insertAtEnd() {
+        list.insert(new Node(10), 5);
+        list.insert(new Node(25), 30);
+        list.insert(new Node(30), 6);
+
+        list.traverse();
+        Assertions.assertEquals("1  2  3  4  10  25  30", outputStream.toString().trim());
+    }
+
+    @Test void insert() {
+        list.insert(new Node(10), 2);
+        list.insert(new Node(25), 5);
+        list.insert(new Node(30), 5);
+
+        list.traverse();
+        Assertions.assertEquals("1  2  10  3  4  30  25", outputStream.toString().trim());
     }
 
     @AfterEach void clearOutputStream() {
