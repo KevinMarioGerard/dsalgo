@@ -32,3 +32,9 @@ out
 *.iws
 *.ipr
 .idea/
+
+.DS_Store
+.vscode
+.project
+.classpath
+.settings
