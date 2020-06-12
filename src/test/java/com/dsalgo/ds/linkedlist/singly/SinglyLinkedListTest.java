@@ -57,6 +57,49 @@ class SinglyLinkedListTest {
         Assertions.assertEquals("1  2  10  3  4  30  25", outputStream.toString().trim());
     }
 
+    @Test void deleteAtHead() {
+        list.delete(1);
+        list.delete(2);
+
+        list.traverse();
+        Assertions.assertEquals("3  4", outputStream.toString().trim());
+    }
+
+    @Test void deleteAtEnd() {
+        list.delete(4);
+        list.delete(3);
+
+        list.traverse();
+        Assertions.assertEquals("1  2", outputStream.toString().trim());
+    }
+
+    @Test void delete() {
+        list.delete(2);
+        list.delete(3);
+
+        list.traverse();
+        Assertions.assertEquals("1  4", outputStream.toString().trim());
+    }
+
+    @Test void deleteUnavailableData() {
+        list.delete(6);
+        list.delete(5);
+
+        list.traverse();
+        Assertions.assertEquals("1  2  3  4", outputStream.toString().trim());
+    }
+
+    @Test void deleteMultipleOccurrencesOfData() {
+        list.insert(new Node(1), 0);
+        list.insert(new Node(1), 0);
+        list.insert(new Node(2), 5);
+        list.delete(2);
+        list.delete(1);
+
+        list.traverse();
+        Assertions.assertEquals("3  4", outputStream.toString().trim());
+    }
+
     @AfterEach void clearOutputStream() {
         outputStream.reset();
     }

@@ -43,4 +43,29 @@ public class SinglyLinkedList {
 
         currentNode.next = node;
     }
+
+    /**
+     * Delete all nodes having data == @param data
+     */
+    public void delete(int data) {
+
+        while (head.data == data) {
+            head = head.next;
+
+            if (head == null) return;
+        }
+
+        Node currentNode = head;
+
+        while (currentNode.next != null) {
+
+            if (currentNode.next.data == data) {
+                currentNode.next = currentNode.next.next;
+
+                if (currentNode.next == null) return;
+            }
+
+            currentNode = currentNode.next;
+        }
+    }
 }
