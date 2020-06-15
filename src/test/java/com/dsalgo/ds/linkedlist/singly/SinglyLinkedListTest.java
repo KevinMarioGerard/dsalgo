@@ -100,6 +100,27 @@ class SinglyLinkedListTest {
         Assertions.assertEquals("3  4", outputStream.toString().trim());
     }
 
+    @Test void deleteAtHeadPosition() {
+        list.deleteNodeAtPosition(0);
+
+        list.traverse();
+        Assertions.assertEquals("2  3  4", outputStream.toString().trim());
+    }
+
+    @Test void deleteAtPosition() {
+        list.deleteNodeAtPosition(2);
+
+        list.traverse();
+        Assertions.assertEquals("1  2  4", outputStream.toString().trim());
+    }
+
+    @Test void deleteNodeAtEnd() {
+        list.deleteNodeAtPosition(3);
+
+        list.traverse();
+        Assertions.assertEquals("1  2  3", outputStream.toString().trim());
+    }
+
     @AfterEach void clearOutputStream() {
         outputStream.reset();
     }

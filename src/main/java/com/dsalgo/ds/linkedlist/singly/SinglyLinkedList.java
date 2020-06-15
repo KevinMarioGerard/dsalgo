@@ -45,9 +45,12 @@ public class SinglyLinkedList {
     }
 
     /**
-     * Delete all nodes having data == @param data
+     * Delete all nodes with data == @param data
      */
     public void delete(int data) {
+        if (head == null) {
+            return;
+        }
 
         while (head.data == data) {
             head = head.next;
@@ -67,5 +70,26 @@ public class SinglyLinkedList {
 
             currentNode = currentNode.next;
         }
+    }
+
+    public void deleteNodeAtPosition(int index) {
+        if (head == null) {
+            return;
+        }
+
+        if (index == 0) {
+            head = head.next;
+            return;
+        }
+
+        Node current = head;
+
+        for (int i = 0; current != null && i < index - 1; i++) {
+            current = current.next;
+        }
+
+        if (current == null || current.next == null) return;
+
+        current.next = current.next.next;
     }
 }
