@@ -96,4 +96,29 @@ public class SinglyLinkedList {
     public void deleteList() {
         head = null;
     }
+
+    public int length() {
+        int length = 0;
+
+        Node current = head;
+
+        while (current != null) {
+            length++;
+            current = current.next;
+        }
+
+        return length;
+    }
+
+    private int lengthRecursive(Node current) {
+        if (current == null) {
+            return 0;
+        }
+
+        return lengthRecursive(current.next) + 1;
+    }
+
+    public int lengthRecursive() {
+        return lengthRecursive(head);
+    }
 }

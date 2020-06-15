@@ -129,6 +129,16 @@ class SinglyLinkedListTest {
         Assertions.assertNull(list.head);
     }
 
+    @Test void listLength() {
+        Assertions.assertEquals(4, list.length());
+        Assertions.assertEquals(0, new SinglyLinkedList().length());
+    }
+
+    @Test void listLengthRecursive() {
+        Assertions.assertEquals(4, list.lengthRecursive());
+        Assertions.assertEquals(0, new SinglyLinkedList().lengthRecursive());
+    }
+
     @AfterEach void clearOutputStream() {
         outputStream.reset();
     }
