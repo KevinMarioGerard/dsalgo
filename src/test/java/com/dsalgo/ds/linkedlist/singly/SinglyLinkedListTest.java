@@ -139,6 +139,17 @@ class SinglyLinkedListTest {
         Assertions.assertEquals(0, new SinglyLinkedList().lengthRecursive());
     }
 
+    @Test void findMiddleElement() {
+        list.insert(new Node(5), 4);
+        Assertions.assertEquals(3, list.findMiddleElement().data);
+
+        list.insert(new Node(6), 5);
+        Assertions.assertEquals(4, list.findMiddleElement().data);
+
+        list.deleteList();
+        Assertions.assertNull(list.findMiddleElement());
+    }
+
     @AfterEach void clearOutputStream() {
         outputStream.reset();
     }
