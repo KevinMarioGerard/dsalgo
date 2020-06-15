@@ -121,6 +121,14 @@ class SinglyLinkedListTest {
         Assertions.assertEquals("1  2  3", outputStream.toString().trim());
     }
 
+    @Test void deleteList() {
+        list.deleteList();
+
+        list.traverse();
+        Assertions.assertEquals("", outputStream.toString().trim());
+        Assertions.assertNull(list.head);
+    }
+
     @AfterEach void clearOutputStream() {
         outputStream.reset();
     }

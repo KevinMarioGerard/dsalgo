@@ -92,4 +92,8 @@ public class SinglyLinkedList {
 
         current.next = current.next.next;
     }
+
+    public void deleteList() {
+        head = null;
+    }
 }
