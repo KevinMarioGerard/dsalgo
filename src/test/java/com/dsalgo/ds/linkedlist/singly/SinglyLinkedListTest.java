@@ -150,6 +150,13 @@ class SinglyLinkedListTest {
         Assertions.assertNull(list.findMiddleElement());
     }
 
+    @Test void reversal() {
+        list.reverse();
+
+        list.traverse();
+        Assertions.assertEquals("4  3  2  1", outputStream.toString().trim());
+    }
+
     @AfterEach void clearOutputStream() {
         outputStream.reset();
     }

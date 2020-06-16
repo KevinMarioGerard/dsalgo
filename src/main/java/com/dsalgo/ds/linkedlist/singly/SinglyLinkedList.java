@@ -137,4 +137,23 @@ public class SinglyLinkedList {
     
         return slow;
     }
+
+    private void reverse(Node current, Node prev) {
+        if (current.next == null) {
+            head = current;
+            current.next = prev;
+            
+            return;
+        }
+
+        Node next = current.next;
+
+        current.next = prev;
+
+        reverse(next, current);
+    }
+
+    public void reverse() {
+        reverse(head, null);
+    }
 }
