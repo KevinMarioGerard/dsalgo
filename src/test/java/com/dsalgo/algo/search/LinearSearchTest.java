@@ -17,5 +17,12 @@ class LinearSearchTest {
         int[] arr = { 6, 4, 2, 3, 11, 13, 1 };
 
         assertThat(linear.search(arr, 40)).isEqualTo(-1);
+        assertThat(linear.recursiveSearch(arr, 40)).isEqualTo(-1);
+    }
+
+    @Test void testRecursiveLinearSearch() {
+        int[] arr = { 6, 4, 2, 3, 11, 13, 1 };
+
+        assertThat(linear.recursiveSearch(arr, 11)).isEqualTo(4);
     }
 }
