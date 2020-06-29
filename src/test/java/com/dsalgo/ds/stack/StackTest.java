@@ -4,7 +4,7 @@ import org.junit.jupiter.api.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class StackTest {
-    @Test void initTests() {
+    @Test void initStack() {
         Stack<Integer> stack = new Stack<>(Integer.class);
         
         stack.push(1);
