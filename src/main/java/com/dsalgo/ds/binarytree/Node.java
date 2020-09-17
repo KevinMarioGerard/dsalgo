@@ -2,11 +2,11 @@ package com.dsalgo.ds.binarytree;
 
 public class Node<T> {
     
-    T data;
+    public T data;
 
-    Node<T> lNode;
+    public Node<T> lNode;
 
-    Node<T> rNode;
+    public Node<T> rNode;
 
     public Node(T data) {
         this.data = data;

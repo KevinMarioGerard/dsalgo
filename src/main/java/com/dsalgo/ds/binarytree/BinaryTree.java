@@ -5,5 +5,5 @@ package com.dsalgo.ds.binarytree;
  */
 public class BinaryTree<T> {
 
-    Node<T> root;
+    public Node<T> root;
 }
