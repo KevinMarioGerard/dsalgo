@@ -50,4 +50,26 @@ public class ArrayRotationTest {
         
         assertThat(Arrays.toString(arr)).isEqualTo("[]");
     }
+
+    @Test void testArrayRotationReversalAlgo() {
+        int[] arr1 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        
+        ArrayRotation.reversal(arr1, 4);
+        
+        assertThat(Arrays.toString(arr1)).isEqualTo("[5, 6, 7, 8, 9, 1, 2, 3, 4]");
+
+        int[] arr2 = {1};
+
+        ArrayRotation.juggle(arr2, 20);
+
+        assertThat(Arrays.toString(arr2)).isEqualTo("[1]");
+    }
+
+    @Test void testEmptyArrayRotationReversalAlgo() {
+        int[] arr = new int[0];
+
+        ArrayRotation.reversal(arr, 3);
+        
+        assertThat(Arrays.toString(arr)).isEqualTo("[]");
+    }
 }

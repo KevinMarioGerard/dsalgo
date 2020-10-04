@@ -53,4 +53,31 @@ public class ArrayRotation {
             arr[prev] = temp;
         }
     }
+
+    /**
+     * Reversal Algorithm
+     * Time Complexity: O(n)
+     * @param arr - array
+     * @param m - number of rotations
+     */
+    public static void reversal(int[] arr, int m) {
+        if (arr.length == 0) return;
+
+        m = m % arr.length;
+
+        reverse(arr, 0, m - 1);
+        reverse(arr, m, arr.length - 1);
+        reverse(arr, 0, arr.length - 1);
+    }
+
+    private static void reverse(int[] arr, int i, int j) {
+        while (i < j) {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+
+            i++;
+            j--;
+        }
+    }
 }
