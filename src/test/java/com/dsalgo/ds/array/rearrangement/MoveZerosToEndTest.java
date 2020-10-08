@@ -14,4 +14,12 @@ public class MoveZerosToEndTest {
         
         assertThat(Arrays.toString(arr)).isEqualTo("[1, 9, 8, 4, 2, 7, 6, 9, 0, 0, 0, 0]");
     }
+
+    @Test void singleTraversal() {
+        int arr[] = {1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0, 9};
+
+        MoveZerosToEnd.singleTraversal(arr);
+        
+        assertThat(Arrays.toString(arr)).isEqualTo("[1, 9, 8, 4, 2, 7, 6, 9, 0, 0, 0, 0]");
+    }
 }
