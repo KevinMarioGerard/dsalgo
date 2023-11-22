@@ -5,6 +5,7 @@ import com.dsalgo.util.ArrayUtil;
 import java.util.Arrays;
 
 /**
+ * Traverse from left and compare adjacent elements and the highest one from unsorted is placed at right side. 
  * Time Complexity: O(n*n)
  * Best Case Time Complexity: O(n) (Already Sorted Array)
  * Auxiliary Space: O(1)
@@ -16,7 +17,6 @@ public class BubbleSort {
             for (int j = 0; j < arr.length - i - 1; j++) {
 
                 System.out.println(Arrays.toString(arr));
-
                 if (arr[j] > arr[j + 1]) {
                     ArrayUtil.swap(arr, j, j + 1);
                 }
