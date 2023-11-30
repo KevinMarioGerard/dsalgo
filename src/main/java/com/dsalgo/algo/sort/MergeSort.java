@@ -38,7 +38,7 @@ public class MergeSort {
             arr[index++] = temp1[index1++];
         }
 
-        while (index1 < temp1.length && index2 < temp2.length) {
+        while (index2 < temp2.length) {
             arr[index++] = temp2[index2++];
         }
 
